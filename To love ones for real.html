@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-image: url('../Music/valentive\ image.jpg'); /* Add the path to your background image */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Adjust text color for better visibility */
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    
+    <button onclick="answerYes()"><img src="c:\Users\Student\Music\Thato.jpg" alt="Yes"></button>
+    <button onclick="answerNo()"><img src="c:\Users\Student\Music\Thato.jpg" alt="No"></button>
+
+    <p id="response"></p>
+
+    <img id="valentineImage" src="valentine_flower.jpg" alt="Valentine Flower">
+
+    <script>
+        function answerYes() {
+            document.getElementById("response").innerHTML = "Yes, I'd love to be your Valentine!";
+            animateImage("file:///C:/Users/Student/Music/Thato.jpg");
+        }
+
+        function answerNo() {
+            document.getElementById("response").innerHTML = "Erre! Maybe next time.";
+            animateImage("file:///C:/Users/Student/Music/rejection.jpg");
+        }
+
+        function animateImage(imagePath) {
+            var image = document.getElementById("valentineImage");
+            image.src = imagePath;
+            image.style.transform = "rotate(360deg)";
+        }
+    </script>
+</body>
+</html>
